@@ -8,12 +8,12 @@ func errParamsIsRequired(paramName string, paramType string) error {
 
 // CreateOpening
 type CreateOpeningRequest struct {
-	Role     string `json:"role"`
-	Company  string `json:"company"`
-	Location string `json:"location"`
-	Remote   *bool  `json:"remote"`
-	Link     string `json:"link"`
-	Salary   int64  `json:"salary"`
+	Role     string `json:"role" example:"Senior Go Developer"`
+	Company  string `json:"company" example:"Google"`
+	Location string `json:"location" example:"São Paulo - SP"`
+	Remote   *bool  `json:"remote" example:"true"`
+	Link     string `json:"link" example:"https://company.com/jobs/123"`
+	Salary   int64  `json:"salary" example:"12000"`
 }
 
 func (r *CreateOpeningRequest) Validate() error {

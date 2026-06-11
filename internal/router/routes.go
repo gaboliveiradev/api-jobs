@@ -26,4 +26,7 @@ func initializeRoutes(router *gin.Engine) {
 
 	// Initialize Swagger
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+
+	// Initialize Scalar API Reference
+	router.GET("/docs", handler.ScalarDocs)
 }
